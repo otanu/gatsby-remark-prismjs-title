@@ -1,20 +1,20 @@
 # gatsby-remark-prismjs-add-title
 
-Adds a code title to code snippets
+コードスニペットの前にコードのタイトルを追加します。
 
-![example](https://github.com/otanu/gatsby-remark-prismjs-title/blob/master/example/code-title.png?raw=true)
+![例](https://github.com/otanu/gatsby-remark-prismjs-title/blob/master/example/code-title.png?raw=true)
 
-## Install
+## インストール
 
 ```bash
 npm install gatsby-remark-prismjs-add-title --save-dev
 ```
 
-## How to use
+## 使い方
 
-### settings
+### プラグインの登録
 
-in your `gatsby-config.js`
+`gatsby-config.js`に以下の設定を追加します。
 
 ```js
 plugins: [
@@ -27,19 +27,19 @@ plugins: [
           options: {
             className: 'your-custom-class-name'
           }
-        } // IMPORTANT: this must be ahead of other plugins that use code blocks
+        } // 重要: コードブロックを使用する他のプラグインより前に定義する必要があります。
       ]
     }
   }
 ]
 ```
 
-### Include CSS
+### CSSの追加
 
-The title tag is set to the `gatsby-code-title` class.
-Set the style according to the style set in the code.
+タイトルのタグには`gatsby-code-title`クラスが設定されます。
+コードに設定しているスタイルに合わせて、スタイルを設定して下さい。
 
-The following is an example of using `okaidia` for` prism.js` style.
+以下は、`prism.js`のスタイルに`okaidia`を使用している場合の例です。
 
 ```css
 .gatsby-code-title {
@@ -65,9 +65,9 @@ The following is an example of using `okaidia` for` prism.js` style.
 }
 ```
 
-### Usage in Markdown
+### マークダウンでの使い方
 
-in your Markdown content
+マークダウンには`:title=表示するタイトル`の形式で設定します。
 
 ``````
 ```js:title=example-file.js
@@ -75,7 +75,7 @@ alert('how cool is this!');
 ```js
 ``````
 
-This plug-in analyzes Markdown AST and converts it into the following structure.
+このプラグインは Markdown ASTを解析し、以下のような構造に変換します。
 
 ``````
 <div class="gatsby-code-title"><span>example-file.js</span></div>
@@ -84,7 +84,7 @@ alert('how cool is this');
 ```
 ``````
 
-It can be used in combination with `gatsby-remark-prismjs` highlighting and line number display.
+また、`gatsby-remark-prismjs`のハイライトや行番号表示と組み合わせて使用する事が可能です。
 
 ``````
 ```go{numberLines: true}{4,8-9}:title=example.go
@@ -101,16 +101,15 @@ func main() {
 ```
 ``````
 
-## Difference from gatsby-remark-code-titles
+## gatsby-remark-code-titlesとの違い
 
-It can be used simultaneously with `gatsby-remark-prismjs` Line Highlight.
-Also, enclose the title with the `span` tag.
-
+`gatsby-remark-prismjs`のLine Highlightの指定と同時に使用可能。
+また、タイトルを`span`タグで囲う。
 
 - `gatsby-remark-code-titles`
 
   `<div class="gatsby-code-title">title</div>`
 
-- This Plugin
+- このプラグイン
 
   `<div class="gatsby-code-title"><span>title</span></div>`

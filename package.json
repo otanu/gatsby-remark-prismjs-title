@@ -2,7 +2,7 @@
   "name": "gatsby-remark-prismjs-title",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "otanu <otanu.dev@gmail.com>",
+  "author": "otanu <otanu.t.dev@gmail.com> (https://qiita.com/otanu)",
   "contributors": [],
   "license": "MIT",
   "keywords": [
@@ -23,5 +23,9 @@
   },
   "dependencies": {
     "unist-util-visit": "~1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otanu/gatsby-remark-prismjs-title.git"
   }
 }
