@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-remark-prismjs-title",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "otanu <otanu.dev@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-remark-plugin"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jest": "^24.7.1",
+    "remark": "9.0.0"
+  },
+  "dependencies": {
+    "unist-util-visit": "~1.4.0"
+  }
+}
