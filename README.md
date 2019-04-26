@@ -1,4 +1,4 @@
-# gatsby-remark-prismjs-add-title
+# gatsby-remark-prismjs-title
 
 Adds a code title to code snippets
 
@@ -7,7 +7,7 @@ Adds a code title to code snippets
 ## Install
 
 ```bash
-npm install gatsby-remark-prismjs-add-title --save-dev
+npm install gatsby-remark-prismjs-title --save-dev
 ```
 
 ## How to use
@@ -84,7 +84,22 @@ alert('how cool is this');
 ```
 ``````
 
-It can be used in combination with `gatsby-remark-prismjs` highlighting and line number display.
+## Difference from gatsby-remark-code-titles
+
+1) It can be used simultaneously with `gatsby-remark-prismjs` Line Highlight.
+Also, enclose the title with the `span` tag.
+
+
+- `gatsby-remark-code-titles`
+
+  `<div class="gatsby-code-title">title</div>`
+
+- This Plugin
+
+  `<div class="gatsby-code-title"><span>title</span></div>`
+  
+
+2) It can be used in combination with `gatsby-remark-prismjs` for highlighting and line number display. Which is not supported in `gatsby-remark-code-titles`
 
 ``````
 ```go{numberLines: true}{4,8-9}:title=example.go
@@ -100,17 +115,3 @@ func main() {
 }
 ```
 ``````
-
-## Difference from gatsby-remark-code-titles
-
-It can be used simultaneously with `gatsby-remark-prismjs` Line Highlight.
-Also, enclose the title with the `span` tag.
-
-
-- `gatsby-remark-code-titles`
-
-  `<div class="gatsby-code-title">title</div>`
-
-- This Plugin
-
-  `<div class="gatsby-code-title"><span>title</span></div>`
