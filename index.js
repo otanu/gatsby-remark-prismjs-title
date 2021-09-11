@@ -20,11 +20,9 @@ module.exports = function gatsbyRemarkCodeTitles(_ref, pluginOptions) {
     const className = ["gatsby-code-title"].concat(customClassName || []);
     const titleNode = {
       type: "html",
-      value: `
-        <div class="${className.join(" ").trim()}">
+      value: `<div class="${className.join(" ").trim()}">
           <span>${title}</span>
-        </div>
-       `
+        </div>`
     };
 
     markdownAST.children.splice(index, 0, titleNode);
