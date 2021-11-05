@@ -1,4 +1,4 @@
-# gatsby-remark-prismjs-add-title
+# gatsby-remark-prismjs-title
 
 コードスニペットの前にコードのタイトルを追加します。
 
@@ -7,7 +7,7 @@
 ## インストール
 
 ```bash
-npm install gatsby-remark-prismjs-add-title --save-dev
+npm install gatsby-remark-prismjs-title --save-dev
 ```
 
 ## 使い方
